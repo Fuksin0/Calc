@@ -3,10 +3,11 @@ input,label {
     box-sizing:border-box;
 }
 body {
-	background-color:#5B3C67 ;
+	background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 form {
- display: inline-flex;
+    display: inline-flex;
     padding: 50px;
     color: white;
     margin-right: auto;
@@ -15,5 +16,5 @@ form {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%;
+    width: 77%;
 }
