@@ -9,6 +9,12 @@ for (let i = 0; i < small.length; i++) {
 
   small[i].addEventListener("input", function () {
     numbers[i] = this.value;
+    numbers[i] = this.value.replace(/[^\d]/g,'');
+    if (numbers.length <= 0) {
+      return numbers[i];
+    } else {
+      all.value = numbers.join(', ') //все введенные числа
+    } 
     // При вводе чисел в любом инпуте, не будем пересобирать все значения,
     // а только изменим конкретный элемент массива.
     // this - указывает на инпут, в котором печатают (который запускает эту функцию)
@@ -23,7 +29,7 @@ updateResults();
 
 function updateResults() {
   sum.value = sumArr(numbers);
-  all.value = numbers.join(', '); //все введенные числа
+  // all.value = numbers.join(', ') //все введенные числа
 
 }
 function sumArr(arr) {
@@ -31,6 +37,11 @@ function sumArr(arr) {
   for (let i = 0; i < arr.length; i++) {
     x += +arr[i]; // (*2)
   }
-  return (x / 4) * 2 - 180;
+  let c = ((x / 4) * 2) - 180;
+  if (c <= 0) {
+    return 'Введите суммы'
+  }
+  return c;
 }
+
 

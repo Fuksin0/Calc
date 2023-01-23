@@ -8,21 +8,27 @@
 </head>
 <body>
 	<form action="">
-	<label for="1">Сумма газа</label>
-	<input id='1' class="input-small" value="" placeholder="Сумма Газа" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br>
+	<label for="1" style='font-weight: bold'>Сумма газа</label>
+	<input id='1' class="input-small input-number" value="" placeholder="Сумма Газа" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br>
 
-	<label for="2">Сумма электричества</label>
-	<input id="2" class="input-small" value="" placeholder="Сумма Электричества" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br>
+	<label for="2" style='font-weight: bold'>Сумма электричества</label>
+	<input id="2" class="input-small input-number" value="" placeholder="Сумма Электричества" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br>
 
-	<label for="3">Сумма розовой</label>
-	<input id="3" class="input-small" value="" placeholder="Сумма Розовой квитанции" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br>
+	<label for="3" style='font-weight: bold'>Сумма розовой</label>
+	<input id="3" class="input-small input-number" value="" placeholder="Сумма Розовой квитанции" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br>
 
 	<label style='font-weight: bold' for="output">Сумма к оплате</label>
-	<input class='output'id="sum" type="" value="" placeholder="2" readonly tabindex="-1" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br>
+	<input class='output input-number'id="sum" type="" value="" placeholder="2" readonly tabindex="-1" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br>
 
 	<label style='font-weight: bold' for="all-numbers">Все введенные суммы</label>
-	<input class='all-numbers'id="all" value="" placeholder="Все введенные суммы" readonly tabindex="-1" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+	<input class='all-numbers input-number'id="all" value="" placeholder="Все введенные суммы" readonly tabindex="-1" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
 		</form>
 </body>
 <script src="index.js"></script>
+<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$('body').on('input', '.input-number', function(){
+	this.value = this.value.replace(/[^0-9]/g, '');
+});
+</script>
 </html>

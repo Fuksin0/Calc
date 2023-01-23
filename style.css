@@ -1,3 +1,6 @@
+label {
+    text-shadow: 0px 0 black, 0 1px black, 0px 0 black, 0 0px black;
+}
 input,label {
     padding:10px;
     box-sizing:border-box;
@@ -41,8 +44,8 @@ input:focus:required:invalid {
     box-shadow: none;
 }
 body {
-	background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    opacity: 90%;
 }
 form {
     display: inline-flex;
