@@ -10,6 +10,36 @@ html, body
 input:focus,textarea:focus{
     outline: none;
    }
+   input:valid {
+    border-color: green;
+    color: green;
+    box-shadow: none;
+}
+   input:invalid {
+    border-color: red;
+    color: red;
+    box-shadow: none;
+}
+input:focus:valid {
+    border-color: green;
+    color: green;
+    box-shadow: none;
+}
+input:focus:invalid {
+    border-color: red;
+    color: red;
+    box-shadow: none;
+}
+input:focus:required:valid {
+    border-color: green;
+    color: green;
+    box-shadow: none;
+}
+input:focus:required:invalid {
+    border-color: green;
+    color: green;
+    box-shadow: none;
+}
 body {
 	background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);

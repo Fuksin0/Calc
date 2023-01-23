@@ -22,12 +22,6 @@ updateResults();
 /************/
 
 function updateResults() {
-	let sum = document.getElementById("sum");
-	if(sum < '0') {
-		sum.type = 'hidden';
-	} else {
-		sum.type = 'visible';
-	}
   sum.value = sumArr(numbers);
   all.value = numbers.join(', '); //все введенные числа
 
